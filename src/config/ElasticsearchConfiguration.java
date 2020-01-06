@@ -1,12 +1,8 @@
-package config;
-
 @Configuration
-
-public class ElasticsearchConfig{
+public class ElasticsearchConfig {
 
     @Value("${elasticsearch.host}")
     private String elasticsearchHost;
-
 
     @Bean(destroyMethod = "close")
     public RestHighLevelClient client() {
@@ -17,4 +13,7 @@ public class ElasticsearchConfig{
         return client;
 
     }
+
+
 }
+
